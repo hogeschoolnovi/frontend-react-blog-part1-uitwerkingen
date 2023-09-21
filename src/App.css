@@ -28,7 +28,6 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
     /*We zorgen er ook voor dat deze flex-item op haar beurt ook weer een flexbox container is, waarin alle children onder elkaar komen te staan*/
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .main-navigation {
@@ -40,7 +39,6 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
 .main-navigation a:visited {
     color: white;
     font-weight: 600;
-    text-decoration: none;
 }
 
 .main-navigation a:hover {

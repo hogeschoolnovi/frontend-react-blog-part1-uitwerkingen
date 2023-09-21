@@ -5,6 +5,7 @@ import Overview from './pages/overviewPage/Overview.jsx';
 import PostDetail from './pages/postDetailPage/PostDetail.jsx';
 import logoMedium from './assets/logo-medium.png'
 import './App.css'
+import NotFound from './pages/notFoundPage/NotFound.jsx';
 
 function App() {
     const navigate = useNavigate();
@@ -29,6 +30,7 @@ function App() {
                     <Route path="/new" element={<NewPost />} />
                     <Route path="/posts" element={<Overview />} />
                     <Route path="/posts/:id" element={<PostDetail />} />
+                    <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </main>
             <footer className="footer-navigation outer-content-container">

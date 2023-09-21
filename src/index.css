@@ -39,7 +39,7 @@ button:hover {
 h1 {
   font-size: 3.4em;
   line-height: 1.1;
-  margin-block: 0.3em;
+  margin-block: 1em;
 }
 
 h2 {
@@ -63,10 +63,16 @@ img {
 }
 
 figure {
-  margin-block: 2em;
+  margin: 0 0 2em 0;
 }
 
 figcaption {
   text-align: right;
   font-size: 0.9em;
+}
+
+a,
+a:visited {
+  color: var(--color-primary);
+  text-decoration: none;
 }
