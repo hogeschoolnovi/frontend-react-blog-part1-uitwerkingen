@@ -53,7 +53,9 @@ De Smaken van Italië (Anna de Kok)
 De titels zijn links die de gebruiker doorlinkt naar de detailpagina van deze post.
 
 ### Blogpost detail pagina
-De Blogpost pagina is een component dat, op basis van de parameter in de url, de juiste blogpost uit het `data.json` bestand laat zien. De gegevens moeten op de volgende manier worden weergegeven:
+Om de juiste informatie te laten zien, zul je eerst de corresponderende blogpost uit `data.json` moeten halen. _Tip:_ krijg je telkens `undefined` terug? Spiek dan eens bij de hints.
+
+Wanneer je de juiste gegevens bij de hand hebt, wil je die op de volgende manier op de pagina weergeven:
 
 >
 > ### De Smaken van Italië (5 minuten)
@@ -64,10 +66,11 @@ De Blogpost pagina is een component dat, op basis van de parameter in de url, de
 > 
 > 12 reacties - 8 keer gedeeld
 > 
+> Terug naar de overzichtspagina
 
 Onderaan de pagina staat een link die de gebruiker terugstuurt naar de overzichtspagina.
 
-_Let op:_ de datum op deze manier te formatteren maak je natuurlijk een mooie helper-functie. Weet je niet meer hoe je datums moet formatteren? Duik dan weer eens in de cursus JavaScript Basics en lees je in over het Date-object.
+Om de datum van _"2023-09-20T11:45:00Z"_ naar _"21 september 2023"_ te converteren maak je natuurlijk een mooie helperfunctie. Weet je niet meer hoe je datums moet formatteren? Duik dan weer eens in de cursus JavaScript Basics bij het hoofdstuk over methodes en lees je in over het _Date-object_.
 
 ## Opdracht 3 - Formulier & Doorlinken
 We willen de gebruiker op ten duur in staat zellen om _zelf_ nieuwe blogposts toe te kunnen voegen aan ons platform. Hoewel we nog geen database of externe bron hebben waarin we die kunnen opslaan, kunnen we er wel alvast voor zorgen dat we die informatie kunnen _verzamelen_. Je mag het formulier bouwen op de standaard manier (controlled components met state) of met React Hook Form.
@@ -119,4 +122,6 @@ function BlogPost() {
   );
 }
 ```
+
+Hierbij is het wel belangrijk om op te merken dat de `id`'s van alle blogposts zijn opgeslagen als nummerieke getallen, in tegenstelling tot de dynamic parameter uit de url. Dynamic parameters zijn altijd van type _string_. Wanneer je beide waardes wil vergelijken, zul je één van de twee eerst moeten omzetten naar een _string_ of _number_.
 
