@@ -6,6 +6,7 @@ import PostDetail from './pages/postDetailPage/PostDetail.jsx';
 import logoMedium from './assets/logo-medium.png'
 import './App.css'
 import NotFound from './pages/notFoundPage/NotFound.jsx';
+import Button from './components/button/Button.jsx';
 
 function App() {
     const navigate = useNavigate();
@@ -14,9 +15,9 @@ function App() {
         <>
             <nav className="main-navigation outer-content-container">
                 <div className="inner-nav-container">
-                    <button type="button" className="main-navigation-logo-button" onClick={() => navigate('/')}>
+                    <Button type="button" variant="invisible" onClick={() => navigate('/')}>
                         <img src={logoMedium} alt="Logo that links to home page"/>
-                    </button>
+                    </Button>
                     <ul className="main-navigation-links">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/posts">Alle posts</Link></li>

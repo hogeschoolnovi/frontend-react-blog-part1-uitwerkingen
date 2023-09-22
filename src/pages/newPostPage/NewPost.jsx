@@ -2,6 +2,8 @@ import './NewPost.css';
 import {useState} from 'react';
 import calculateReadTime from '../../helpers/calculateReadTime.js';
 import {useNavigate} from 'react-router-dom';
+import Input from '../../components/input/Input.jsx';
+import Button from '../../components/button/Button.jsx';
 
 function NewPost() {
     const [formState, setFormState] = useState({
@@ -40,33 +42,28 @@ function NewPost() {
             <div className="inner-content-container__text-restriction">
                 <form className="new-post-form" onSubmit={handleSubmit}>
                     <h1>Post toevoegen</h1>
-                    <label htmlFor="post-title">Titel</label>
-                    <input
+                    <Input
                         type="text"
-                        id="post-title"
                         name="title"
-                        required
-                        value={formState.title}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor="post-subtitle">Subtitle</label>
-                    <input
+                        labelText="Titel"
+                        required={true}
+                        formStateValue={formState.title}
+                        handleChange={handleChange} />
+                    <Input
                         type="text"
-                        id="post-subtitle"
                         name="subtitle"
-                        required
-                        value={formState.subtitle}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor="post-author">Naam en achternaam</label>
-                    <input
+                        labelText="Subtitel"
+                        required={true}
+                        formStateValue={formState.subtitle}
+                        handleChange={handleChange} />
+                    <Input
                         type="text"
-                        id="post-author"
                         name="author"
-                        required
-                        value={formState.author}
-                        onChange={handleChange}
-                    />
+                        labelText="Naam en achternaam"
+                        required={true}
+                        formStateValue={formState.author}
+                        handleChange={handleChange} />
+
                     <label htmlFor="post-content">Blogpost</label>
                     <textarea
                         name="content"
@@ -78,9 +75,9 @@ function NewPost() {
                         maxLength={2000}
                         value={formState.content}
                         onChange={handleChange}></textarea>
-                   <button type="submit">
+                   <Button type="submit" variant="primary">
                         Toevoegen
-                    </button>
+                    </Button>
                 </form>
             </div>
         </section>
