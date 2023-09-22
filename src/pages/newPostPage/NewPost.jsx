@@ -1,6 +1,7 @@
 import './NewPost.css';
 import {useState} from 'react';
 import calculateReadTime from '../../helpers/calculateReadTime.js';
+import {useNavigate} from 'react-router-dom';
 
 function NewPost() {
     const [formState, setFormState] = useState({
@@ -9,6 +10,8 @@ function NewPost() {
         author: '',
         content: '',
     });
+
+    const navigate = useNavigate();
 
     function handleChange(e) {
         setFormState({
@@ -19,6 +22,7 @@ function NewPost() {
 
     function handleSubmit(e) {
         e.preventDefault();
+
         console.log({
             ...formState,
             shares: 0,
@@ -26,6 +30,9 @@ function NewPost() {
             created: new Date().toISOString(),
             readTime: calculateReadTime(formState.content),
         });
+
+        console.log('De blog is succesvol verzameld! 🌈');
+        navigate('/posts');
     }
 
     return (
@@ -74,7 +81,6 @@ function NewPost() {
                    <button type="submit">
                         Toevoegen
                     </button>
-
                 </form>
             </div>
         </section>
