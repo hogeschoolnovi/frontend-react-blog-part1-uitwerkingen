@@ -26,3 +26,10 @@
     border: 1px solid #D1D3DB;
     background-color: white;
 }
+
+.form-error-message {
+    color: red;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: left;
+}
