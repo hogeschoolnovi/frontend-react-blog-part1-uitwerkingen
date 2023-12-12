@@ -32,7 +32,7 @@ function NewPost() {
         });
 
         console.log('De blog is succesvol verzameld! 🌈');
-        navigate('/posts');
+        // navigate('/posts');
     }
 
     return (
