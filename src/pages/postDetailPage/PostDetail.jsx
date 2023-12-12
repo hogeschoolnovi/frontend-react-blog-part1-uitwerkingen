@@ -13,7 +13,7 @@ function PostDetail() {
 
     return (
         <section className="post-detail-section outer-content-container">
-            <div className="inner-content-container">
+            <div className="inner-content-container__text-restriction">
                 <h1>{title}</h1>
                 <h2>{subtitle}</h2>
                 <p className="post-detail-author">Geschreven door <em>{author}</em> op {formatDateString(created)}</p>

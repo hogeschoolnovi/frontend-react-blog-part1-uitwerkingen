@@ -1,4 +1,4 @@
-import {Link, Route, Routes, useNavigate} from 'react-router-dom';
+import {Link, NavLink, Route, Routes, useNavigate} from 'react-router-dom';
 import Home from './pages/homePage/Home.jsx';
 import NewPost from './pages/newPostPage/NewPost.jsx';
 import Overview from './pages/overviewPage/Overview.jsx';
@@ -19,9 +19,15 @@ function App() {
                         <img src={logoMedium} alt="Logo that links to home page"/>
                     </Button>
                     <ul className="main-navigation-links">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/posts">Alle posts</Link></li>
-                        <li><Link to="/new">Nieuwe post maken</Link></li>
+                        <li>
+                            <NavLink className={({ isActive }) => isActive ? "active-link" : "default-link"} to="/">Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink className={({ isActive }) => isActive ? "active-link" : "default-link"} to="/posts">Alle posts</NavLink>
+                        </li>
+                        <li>
+                            <NavLink className={({ isActive }) => isActive ? "active-link" : "default-link"} to="/new">Nieuwe post maken</NavLink>
+                        </li>
                     </ul>
                 </div>
             </nav>
